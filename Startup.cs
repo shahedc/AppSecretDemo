@@ -18,6 +18,7 @@ namespace AppSecretDemo
     public class Startup
     {
         private string _SecretApiKey = null;
+        private string _SecretConnString = null;
 
         public Startup(IConfiguration configuration)
         {
@@ -47,6 +48,7 @@ namespace AppSecretDemo
 
 
             _SecretApiKey = Configuration["SecretValues:SecretApiKey"];
+            _SecretConnString = Configuration["SecretValues:SecretConnString"];
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
